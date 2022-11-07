@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "Bebas": 'Bebas Neue',
+        "Bungee": 'Bungee Spice',
+      }
+    },
   },
   plugins: [],
 }
