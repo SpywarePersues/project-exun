@@ -12,7 +12,9 @@
     "firebase": "^9.13.0",
     "next": "13.0.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-game-snake": "^1.0.4",
+    "react-snake-game": "^1.0.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

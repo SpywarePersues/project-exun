@@ -1,15 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import react, { useEffect, useEffect as UseEffect, useState as UseState } from "react";
+import react, { useEffect, useEffect as UseEffect, useState, useState as UseState } from "react";
 import { app, db } from "../firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useRouter as UseRouter } from "next/router";
 import Navbar from '../components/Navbar'
+import { collection, getDocs, addDoc, docRef} from 'firebase/firestore'
 
 function login() {
     const [token, setToken] = UseState("")
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
     const router = UseRouter()
+    const [firedata, setFiredata] = useState([])
+    
+    const databaseRef = collection(db, 'accounts')
+    let registered = false
 
     const signUpWithGoogle = () => {
         signInWithPopup(auth, googleProvider)
@@ -18,6 +23,30 @@ function login() {
             localStorage.setItem('Name', response.user.displayName)
             localStorage.setItem('PFP', response.user.photoURL)
             localStorage.setItem('Email', response.user.email)
+        
+            const getData = async () => {
+                await getDocs(databaseRef)
+                .then((response) => {
+                    setFiredata(response.docs.map((data) => {
+                        console.log(data.data())
+                        if(data.data().email === localStorage.getItem('Email')){
+                            registered = true
+                            console.log('found')
+                        }
+                    }))
+                })
+                const registerDetails = async () => {
+                    const docRef = await addDoc(collection(db, 'accounts'), {
+                            Username: localStorage.getItem('Name'),
+                            Balance: 1000,
+                            email: localStorage.getItem('Email'),
+                            Purchases: []
+                        });
+                }
+                registered ? console.log('registered') : registerDetails()
+
+            }
+            getData()
             router.push('/')
         })
     }
@@ -30,6 +59,8 @@ function login() {
             localStorage.clear()
             router.reload()
     }
+
+
     return (
         <div>
             <Navbar title="Login / Profile" />
