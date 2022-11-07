@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { db } from '../../firebaseConfig'
-import { arrayUnion, collection, doc, getDoc, getDocs, updateDoc } from 'firebase/firestore'
+import { arrayUnion, collection, doc, getDoc, getDocs, setDoc, updateDoc } from 'firebase/firestore'
 import React, { useEffect as UseEffect, useState as UseState } from 'react'
 import Navbar from "../../components/Navbar";
 import { useRouter as UseRouter } from 'next/router';
@@ -9,12 +9,16 @@ import Link from 'next/link';
 export default function index(){
     const router = UseRouter()
     const databaseRef = collection(db, 'Deal of the day items')
+    const databaseRef2 = collection(db, 'accounts')
     const [firedata, setFiredata] = UseState([])
     const [email, setEmail] = UseState("")
     
     UseEffect(() => {
         getData()
     }, [])
+
+    const [balance, setBalance] = UseState()
+    const [newBalance, setNewbalance] = UseState()
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -24,7 +28,15 @@ export default function index(){
             }))
         })
     }
-
+    const getAccountsData = async () => {
+        await getDocs(databaseRef2)
+        .then((response) => {
+            response.docs.map((data) => {
+                setBalance(data.data().Balance)
+            })
+        })
+    }
+    getAccountsData()
     const [token, setToken] = UseState()
 
     UseEffect(() => {
@@ -34,6 +46,8 @@ export default function index(){
     UseEffect(() => {
         setEmail(localStorage.getItem('Email'))
     }, [])
+
+    
 
     return(
         <div>
@@ -48,11 +62,12 @@ export default function index(){
                             <h1 className='md:text-4xl font-bold my-2 mt-4 mx-4 font-Bebas text-2xl text-gray-300'>{data.name}</h1>
                             <h1 className='my-4 mx-4 text-gray-300 font-Bebas md:text-xl'>💰 {data.price}</h1>
                             <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit mx-4 py-2 my-3 rounded-md text-xl" onClick={async () => {
+                                console.log(balance- data.price)
                                 const docRef = await updateDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
                                     Username: localStorage.getItem('Name'),
-                                    Balance: `1000` - data.price,
+                                    Balance: balance - data.price,
                                     email: localStorage.getItem('Email'),
-                                    Purchases: arrayUnion({name: data.name, image: data.image, price: data.price})
+                                    Purchases: arrayUnion({item: data.name, image: data.image, price: data.price})
                                 });
                             }}>REDEEM</button>
                         </div>
