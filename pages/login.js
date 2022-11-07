@@ -4,10 +4,11 @@ import { app, db } from "../firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useRouter as UseRouter } from "next/router";
 import Navbar from '../components/Navbar'
-import { collection, getDocs, addDoc, docRef} from 'firebase/firestore'
+import { collection, getDocs, addDoc, docRef, doc, setDoc} from 'firebase/firestore'
 
 function login() {
     const [token, setToken] = UseState("")
+    const [email, setEmail] = UseState("")
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
     const router = UseRouter()
@@ -36,7 +37,7 @@ function login() {
                     }))
                 })
                 const registerDetails = async () => {
-                    const docRef = await addDoc(collection(db, 'accounts'), {
+                    const docRef = await setDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
                             Username: localStorage.getItem('Name'),
                             Balance: 1000,
                             email: localStorage.getItem('Email'),
@@ -53,6 +54,7 @@ function login() {
 
     UseEffect(() => {
         setToken(localStorage.getItem('Token'))
+        setEmail(localStorage.getItem('Email'))
     }, [])
 
     const manageSignOut = () => {
