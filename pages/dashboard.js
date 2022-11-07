@@ -32,18 +32,18 @@ export default function Dashboard(){
 
     return(
         <div>
-            <Navbar />
+            <Navbar title="Dashboard" />
             {
                 token ? 
                 <div>
                     <img src="./wave-bg.png" alt="wave" className="absolute top-0 -z-10 h-screen"/>
-                    <div>
-                        <div className="profile-sidebar">
-                            <img src={localStorage.getItem("PFP")} />
-                            <p>{localStorage.getItem("Name")}</p>
-                            <p>{firedata}</p>
+                    <di className="">
+                        <div className="profile-sidebar glassmorph p-4 w-4/12 mx-auto">
+                            <img src={localStorage.getItem("PFP")} className="rounded-lg mx-auto" />
+                            <p className="text-white font-Bebas text-4xl text-center my-4">{localStorage.getItem("Name")}</p>
+                            <p className="text-white font-Bebas text-2xl text-center">💰 {firedata}</p>
                         </div>
-                    </div>
+                    </di>
                 </div>
                 :
                 <div>You need to login first</div>

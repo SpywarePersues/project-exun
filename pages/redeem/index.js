@@ -62,13 +62,18 @@ export default function index(){
                             <h1 className='md:text-4xl font-bold my-2 mt-4 mx-4 font-Bebas text-2xl text-gray-300'>{data.name}</h1>
                             <h1 className='my-4 mx-4 text-gray-300 font-Bebas md:text-xl'>💰 {data.price}</h1>
                             <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit mx-4 py-2 my-3 rounded-md text-xl" onClick={async () => {
-                                console.log(balance- data.price)
-                                const docRef = await updateDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
-                                    Username: localStorage.getItem('Name'),
-                                    Balance: balance - data.price,
-                                    email: localStorage.getItem('Email'),
-                                    Purchases: arrayUnion({item: data.name, image: data.image, price: data.price})
-                                });
+                                if(balance >= data.price){
+                                    console.log(balance- data.price)
+                                    const docRef = await updateDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
+                                        Username: localStorage.getItem('Name'),
+                                        Balance: balance - data.price,
+                                        email: localStorage.getItem('Email'),
+                                        Purchases: arrayUnion({item: data.name, image: data.image, price: data.price})
+                                    });
+                                }
+                                else {
+                                    alert('You do not have enough points to redeem this.')
+                                }
                             }}>REDEEM</button>
                         </div>
                     )
