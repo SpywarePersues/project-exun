@@ -11,7 +11,7 @@ function login() {
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
     const router = UseRouter()
-    const [firedata, setFiredata] = useState([])
+    const [firedata, setFiredata] = UseState([])
     
     const databaseRef = collection(db, 'accounts')
     let registered = false
