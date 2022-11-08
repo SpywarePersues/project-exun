@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
