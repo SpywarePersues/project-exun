@@ -1,17 +1,21 @@
 ## Project - Exun
 
-## Authors
+## Collabrators
 
 - [@Supriyo Ghosh](https://github.com/SpywarePersues)
 - [@Siddharth Sharma](https://github.com/JadugarKalakaboola)
+- [@Aashay Kumar](https://github.com/Icystun)
+- [@Abhay Kumar Singh](https://github.com/007abhay01)
 
 ## Technologies Used
 
 - Next.js
 - TailwindCSS
 - React
-- -
-- -
+- React-Icons
+- Firebase
+- React ChartJS
+- Eslint
 
 ## Installation :wrench:
 
