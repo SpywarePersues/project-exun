@@ -50,7 +50,7 @@ function login() {
 
             }
             getData()
-            router.push('/')
+            router.push('/dashboard')
         })
     }
 
@@ -67,7 +67,8 @@ function login() {
 
     return (
         <div className="">
-            <Navbar title="Login / Profile" />
+            {token ? (<Navbar title="Profile" />) : (<Navbar title="Login" />)}
+            
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             {!token ? (
                 <div><h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Login</h1>
