@@ -46,20 +46,20 @@ const data = {
 export default function CoinsGraph() {
   return (
     <div className="lg:w-4/12 lg:mx-10">
-      <div className="glassmorph lg:h-fit lg:mx-5 lg:py-5">
+      <div className="dashboard-box rounded-lg lg:h-fit lg:mx-5 lg:py-5">
             <div className="lg:w-11/12 lg:h-11/12" >
                 <Line data={data}/>
             </div>   
       </div>
-      <div className="glassmorph lg:mx-5 lg:mt-5 my-5 lg:my-0">
+      <div className="dashboard-box lg:mx-5 lg:mt-5 my-5 lg:my-0 rounded-lg">
           <p className="text-center font-Bebas text-4xl py-2">Updates!</p>
           <div className="overflow-y-scroll lg:h-[220px] purchases">
-            <p className="border-y-[1px] border-white text-center py-2">Games are temporarily under maintainance</p>
-            <p className="border-b-[1px] border-white text-center py-2">The first ReTrend pass is releasing on 15 Nov 2022</p>
-            <p className="border-b-[1px] border-white text-center py-2">Redeem shop refreshes every month</p>
-            <p className="border-b-[1px] border-white text-center py-2">Will our webapp win EXUN 2022?</p>
-            <p className="border-b-[1px] border-white text-center py-2">Are you really reading this?</p>
-            <p className="border-b-[1px] border-white text-center py-2">Team INT_Elligence is the best.</p>
+            <p className="border-y-[1px] border-gray-600 text-center py-2">Games are temporarily under maintainance</p>
+            <p className="border-b-[1px] border-gray-600 text-center py-2">The first ReTrend pass is releasing on 15 Nov 2022</p>
+            <p className="border-b-[1px] border-gray-600 text-center py-2">Redeem shop refreshes every month</p>
+            <p className="border-b-[1px] border-gray-600 text-center py-2">Will our webapp win EXUN 2022?</p>
+            <p className="border-b-[1px] border-gray-600 text-center py-2">Are you really reading this?</p>
+            <p className="border-b-[1px] border-gray-600 text-center py-2">Team INT_Elligence is the best.</p>
           </div>
       </div>  
     </div>

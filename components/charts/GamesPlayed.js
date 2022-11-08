@@ -35,7 +35,7 @@ export default function GamesPlayed(){
     }
 
     return(
-        <div className="lg:w-4/12 glassmorph my-5 lg:my-0 lg:ml-16 text-center font-Inter">
+        <div className="lg:w-4/12 dashboard-box rounded-lg my-5 lg:my-0 lg:ml-16 text-center font-Inter">
             <h1 className="mt-4">Games Played {`(in hours)`}</h1>
             <div className="lg:w-11/12 lg:py-5 w-48 mx-auto" >
                 <Pie data={data}/>
