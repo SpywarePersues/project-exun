@@ -50,7 +50,7 @@ function login() {
 
             }
             getData()
-            router.push('/home')
+            router.push('/')
         })
     }
 
