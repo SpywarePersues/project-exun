@@ -7,7 +7,7 @@ export default function GameBar(){
         <div>
             <Navbar title="Game Bar" />
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
-            <div className="games grid grid-cols-4 lg:w-11/12 mx-auto text-white">
+            <div className="games grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 lg:w-11/12 mx-auto text-white">
                 <a href={'https://snakemaster.vercel.app/'} target="_Blank" rel="noreferrer">
                 <div className="glassmorph hover:scale-105 m-2 transition-transform ease-in-out cursor-pointer text-center text-2xl font-Bebas">
                     <img src="https://www.coolmathgames.com/sites/default/files/snake.png" className="p-2 h-48 w-full" />
