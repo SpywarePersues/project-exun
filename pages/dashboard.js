@@ -67,7 +67,7 @@ export default function Dashboard(){
                                         <div className="flex py-2" key={data.price}>
                                             <img src={data.image} className="w-32 h-22 rounded-md" />
                                             <div className="px-2">
-                                                <p className="font-Bebas text-3xl text-white">Name: {data.item}</p>
+                                                <p className="font-Bebas text-3xl text-white">{data.item}</p>
                                                 <p className="font-Bebas text-lg text-white">Bought for: <img src="./coin.gif" className="w-5 inline-flex"/> {data.price}</p>
                                             </div>
                                         </div>
