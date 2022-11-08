@@ -6,7 +6,7 @@ export default function Features(){
         <div>
             <Navbar title="Features" />
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
-            <h1 className='text-7xl font-Bungee text-center pb-5 pt-5 font-semibold'>Features</h1>
+            <h1 className='text-6xl md:text-7xl font-Bungee text-center pb-5 pt-5 font-semibold'>Features</h1>
             <div className="lg:flex glassmorph w-10/12 mx-auto">
                 <img src="https://cdn.discordapp.com/attachments/1009496733211951111/1039524884390354974/unknown.png" className=" my-6 w-11/12 mx-auto lg:mx-4 lg:w-7/12 rounded-md" />
                 <div className="text-white font-Bebas text-2xl lg:text-4xl xl:text-5xl mx-auto text-center lg:my-auto my-4">
