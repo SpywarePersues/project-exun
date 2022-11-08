@@ -47,29 +47,26 @@ export default function Dashboard(){
             {
                 mounted ? 
                 token ? 
-                <div className="lg:flex mx-2 lg:mx-5 font-Inter">
-                    <div className="glassmorph lg:w-3/12 py-5 pl-5">
+                <div className="lg:flex font-Inter">
+                    <div className="glassmorph lg:w-5/12 py-5 pl-5 mx-auto">
                         <div className="lg:flex">
-                            <img src={localStorage.getItem('PFP')} className="w-28 mx-auto lg:mx-0 rounded-full lg:rounded-lg"/>
+                            <img src={localStorage.getItem('PFP')} className="w-4/12 mx-auto lg:mx-0 rounded-full lg:rounded-lg"/>
                             <div className="lg:px-5 px-2">
-                                {localStorage.getItem('Name')}
-                                <br></br>
-                                {localStorage.getItem('Email')}
-                                <br></br>
-                                Balance: <img src="./coin.gif" className="w-5 inline-flex"/>{userBalance}
-                                <br></br>
-                                Rank: {localStorage.getItem('Rank')}
+                                <h1 className="font-Bebas text-4xl text-white">{localStorage.getItem('Name')}</h1>
+                                <h1 className="font-Bebas text-2xl text-white">{localStorage.getItem('Email')}</h1>
+                                <h1 className="font-Bebas text-xl text-white mt-4">Balance: <img src="./coin.gif" className="w-5 inline-flex"/>{userBalance}</h1>
+                                <h1 className="font-Bebas text-xl text-white">Rank: {localStorage.getItem('Rank')}</h1>
                             </div>
                         </div>
                         <div className="pt-10">
-                            <p className="text-center font-Bebas text-3xl">Purchases</p>
+                            <p className="text-center text-white font-Bebas text-3xl">Purchases</p>
                         </div>
                     </div>
                 </div>
                 :
                 <div>You need to login first</div> 
                 : 
-                <div>Loading...</div>
+                <div className="text-center text-6xl text-white font-Bebas">Loading...</div>
             }
             <Footer />
         </div>
