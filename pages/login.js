@@ -66,9 +66,9 @@ function login() {
 
 
     return (
-        <div>
+        <div className="">
             <Navbar title="Login / Profile" />
-            <img src="./wave-bg.png" alt="wave" className="absolute top-0 -z-10 h-screen"/>
+            <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             {!token ? (
                 <div><h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Login</h1>
                 <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-14">
