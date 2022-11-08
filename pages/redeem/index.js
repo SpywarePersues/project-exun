@@ -73,6 +73,7 @@ export default function index(){
                                         Purchases: arrayUnion({item: data.name, image: data.image, price: data.price})
                                     });
                                     getAccountsData()
+                                    alert(`Redeemed ${data.name}`)
                                 }
                                 else {
                                     alert('You do not have enough points to redeem this.')
