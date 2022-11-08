@@ -5,7 +5,6 @@ import React, { useEffect as UseEffect, useState as UseState } from 'react'
 import Navbar from "../../components/Navbar";
 import { useRouter as UseRouter } from 'next/router';
 import Link from 'next/link';
-import Footer from '../../components/Footer';
 
 export default function index(){
     const router = UseRouter()
@@ -33,7 +32,9 @@ export default function index(){
         await getDocs(databaseRef2)
         .then((response) => {
             response.docs.map((data) => {
-                setBalance(data.data().Balance)
+                if(data.data().email === localStorage.getItem('Email')){
+                    setBalance(data.data().Balance)
+                }
             })
         })
     }
@@ -80,7 +81,6 @@ export default function index(){
                     )
                 })}
             </div>) : (<h1 className='text-6xl font-Bungee text-center'>Login first to redeem things.</h1>)}
-            <Footer />
         </div>
     )
 }
