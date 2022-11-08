@@ -81,7 +81,7 @@ export default function Dashboard(){
                 :
                 <div>You need to login first</div> 
                 : 
-                <div>Loading...</div>
+                <div className="font-Bungee text-6xl text-center">Login first.</div>
             }
             <Footer />
         </div>
