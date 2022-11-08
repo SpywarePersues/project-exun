@@ -83,7 +83,9 @@ export default function Dashboard(){
                 :
                 <div>You need to login first</div> 
                 : 
-                <div>Loading...</div>
+                <div className="flex flex-row justify-between">
+                    <img src="https://images.squarespace-cdn.com/content/v1/57583088356fb0568d991014/1550527646302-AF56GQDTYTJSDGL8OPO8/Loading.gif" className="w-fit mx-auto"/>
+                </div>
             }
         </div>
     )
