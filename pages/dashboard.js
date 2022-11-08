@@ -63,6 +63,20 @@ export default function Dashboard(){
                         </div>
                         <div className="pt-10">
                             <p className="text-center font-Bebas text-3xl">Purchases</p>
+                            <div className="lg:h-64 lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
+                                {
+                                    userPurchases.map((data) => {
+                                        return(
+                                        <div className="flex py-2" key={data.price}>
+                                            <img src={data.image} className="w-16 h-12" />
+                                            <div className="px-2">
+                                                <p>Name: {data.item}</p>
+                                                <p>Bought for: {data.price}</p>
+                                            </div>
+                                        </div>
+                                    )})
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,7 +85,6 @@ export default function Dashboard(){
                 : 
                 <div>Loading...</div>
             }
-            <Footer />
         </div>
     )
 }

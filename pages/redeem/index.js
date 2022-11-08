@@ -72,6 +72,7 @@ export default function index(){
                                         email: localStorage.getItem('Email'),
                                         Purchases: arrayUnion({item: data.name, image: data.image, price: data.price})
                                     });
+                                    alert('Successfully purchased '+ data.name)
                                     getAccountsData()
                                 }
                                 else {
