@@ -43,37 +43,36 @@ export default function Dashboard(){
 
 
     return(
-        <div>
+        <div className="">
             <Navbar title="Dashboard" />
-            <img src="./wave-bg.png" alt="wave" className="absolute top-0 -z-10 h-screen"/>
+            <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             {
                 mounted ? 
                 token ? 
-                <div className="lg:flex mx-2 lg:mx-5 font-Inter">
-                    <div className="glassmorph lg:w-3/12 py-5 pl-5">
+                <div className="lg:flex mx-2 lg:mx-5 font-Inter text-gray-100">
+                    <div className="glassmorph lg:w-[29%] py-5 pl-5">
                         <div className="lg:flex">
                             <img src={localStorage.getItem('PFP')} className="w-28 mx-auto lg:mx-0 rounded-full lg:rounded-lg"/>
                             <div className="lg:px-5 px-2">
                                 {localStorage.getItem('Name')}
                                 <br></br>
-                                {localStorage.getItem('Email')}
-                                <br></br>
-                                Balance: <img src="./coin.gif" className="w-5 inline-flex"/>{userBalance}
+                                <p>{localStorage.getItem('Email')}</p>
+                                Balance: <img src="./coin.gif" className="w-5 inline-flex"/> {userBalance}
                                 <br></br>
                                 Rank: {localStorage.getItem('Rank')}
                             </div>
                         </div>
                         <div className="pt-10">
-                            <p className="text-center font-Bebas text-3xl">Purchases</p>
+                            <p className="text-center font-Bebas text-3xl mb-3">Purchases</p>
                             <div className="lg:h-[300px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
                                 {
                                     userPurchases.map((data) => {
                                         return(
                                         <div className="flex py-2" key={data.price}>
-                                            <img src={data.image} className="w-16 h-12" />
+                                            <img src={data.image} className="w-16 h-12 rounded-sm" />
                                             <div className="px-2">
-                                                <p>Name: {data.item}</p>
-                                                <p>Bought for: {data.price}</p>
+                                                <p>{data.item}</p>
+                                                <p>Bought for: <img src="./coin.gif" className="w-5 inline-flex"/> {data.price}</p>
                                             </div>
                                         </div>
                                     )})

@@ -56,7 +56,7 @@ export default function index(){
         <div className=''>
             <Navbar title="Redeem" />
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
-            <h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Deal of the Day</h1>
+            <h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Deal of the Month</h1>
             {token ? (<div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4'>
                 {firedata.map((data) => {
                     return(
