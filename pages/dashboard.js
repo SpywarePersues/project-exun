@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import { db } from '../firebaseConfig'
 import { collection, getDocs } from 'firebase/firestore'
 import Footer from "../components/Footer";
+import GamesPlayed from "../components/charts/GamesPlayed";
+import CoinsGraph from "../components/charts/CoinsGraph";
 
 export default function Dashboard(){
 
@@ -79,6 +81,8 @@ export default function Dashboard(){
                             </div>
                         </div>
                     </div>
+                        <GamesPlayed />
+                        <CoinsGraph />
                 </div>
                 :
                 <div>You need to login first</div> 
