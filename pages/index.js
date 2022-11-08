@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="text-gray-900 w-screen h-screen">
+    <div className="text-gray-900 w-screen h-screen overflow-x-hidden">
       <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
       <Navbar title="Home" />
 
