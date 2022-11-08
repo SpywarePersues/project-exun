@@ -10,7 +10,7 @@ export default function GamesPlayed(){
         labels: ['Retro Snake Game', 'Super Mario', 'Tetris', 'Flappy bird', 'Tekken', 'GTA'],
         datasets : [
             {
-                label: 'Total number fo hours played',
+                label: 'Total number hours played',
                 data : [Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 45) + 1, Math.floor(Math.random() * 56) + 1, Math.floor(Math.random() * 87) + 1, Math.floor(Math.random() * 45) + 1, Math.floor(Math.random() * 97) + 1],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.4)',
