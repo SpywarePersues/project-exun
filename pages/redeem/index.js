@@ -61,7 +61,7 @@ export default function index(){
                 {firedata.map((data) => {
                     return(
                         <div key={data.id} className="glassmorph md:mx-10 mx-4 w-11/12 rounded-lg hover:scale-105 transition-scale duration-300 my-3 p-4">
-                            <img src={data.image} className="rounded-md w-full h-52" alt='' />
+                            <img src={data.image} className="rounded-md w-full h-[13.5rem]" alt='' />
                             <h1 className='font-bold my-2 mt-4 mx-4 font-mono text-xl text-gray-200'>{data.name}</h1>
                             <h1 className='my-4 mx-4 text-gray-300 font-Bebas md:text-xl'><img src="./coin.gif" className="w-5 inline-flex"/> {data.price}</h1>
                             <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit mx-4 py-2 my-3 rounded-md text-xl" onClick={async () => {

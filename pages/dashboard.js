@@ -88,6 +88,7 @@ export default function Dashboard(){
                 : 
                 <div>Loading...</div>
             }
+            <Footer />
         </div>
     )
 }
