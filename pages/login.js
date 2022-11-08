@@ -5,6 +5,7 @@ import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuth
 import { useRouter as UseRouter } from "next/router";
 import Navbar from '../components/Navbar'
 import { collection, getDocs, addDoc, docRef, doc, setDoc} from 'firebase/firestore'
+import Footer from "../components/Footer";
 
 function login() {
     const [token, setToken] = UseState("")
@@ -90,6 +91,7 @@ function login() {
                 <button className="font-Bebas text-center button mt-4 lg:ml-10 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit mx-auto block py-2 my-3 rounded-md text-xl" onClick={manageSignOut}>Logout</button>
             </div>
             </div>)}
+            <Footer />
         </div>
     )
 }
