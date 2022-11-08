@@ -19,9 +19,9 @@ export default function Dashboard(){
         .then((response) => {
             setFiredata(response.docs.map((data) => {
                 if(data.data().email === localStorage.getItem('Email')){
-                    setMounted(true)
                     setUserbalance(data.data().Balance)
                     setUserPurchases(data.data().Purchases)
+                    setMounted(true)
                 }
             }))
         })
@@ -84,9 +84,9 @@ export default function Dashboard(){
                         <CoinsGraph />
                 </div>
                 :
-                <div>You need to login first</div> 
+                <div className="font-Bungee text-center text-6xl">You need to login first.</div> 
                 : 
-                <div>Loading...</div>
+                <div className="font-Bungee text-center text-6xl">You need to login first.</div>
             }
             <Footer />
         </div>
