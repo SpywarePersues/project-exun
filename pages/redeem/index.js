@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function index(){
     const router = UseRouter()
-    const databaseRef = collection(db, 'Deal of the day items')
+    const databaseRef = collection(db, 'redeem')
     const databaseRef2 = collection(db, 'accounts')
     const [firedata, setFiredata] = UseState([])
     const [email, setEmail] = UseState("")
@@ -58,8 +58,8 @@ export default function index(){
                 {firedata.map((data) => {
                     return(
                         <div key={data.id} className="glassmorph md:mx-10 mx-4 w-11/12 rounded-lg hover:scale-105 transition-scale duration-300 my-3 p-4">
-                            <img src={data.image} className="rounded-md" alt='' />
-                            <h1 className='md:text-4xl font-bold my-2 mt-4 mx-4 font-Bebas text-2xl text-gray-300'>{data.name}</h1>
+                            <img src={data.image} className="rounded-md w-full h-52" alt='' />
+                            <h1 className='font-bold my-2 mt-4 mx-4 font-mono text-xl text-gray-200'>{data.name}</h1>
                             <h1 className='my-4 mx-4 text-gray-300 font-Bebas md:text-xl'>💰 {data.price}</h1>
                             <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit mx-4 py-2 my-3 rounded-md text-xl" onClick={async () => {
                                 if(balance >= data.price){

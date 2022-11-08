@@ -20,6 +20,7 @@ function login() {
     const signUpWithGoogle = () => {
         signInWithPopup(auth, googleProvider)
         .then((response) => {
+            console.log(response.user)
             localStorage.setItem('Token', response.user.accessToken)
             localStorage.setItem('Name', response.user.displayName)
             localStorage.setItem('PFP', response.user.photoURL)

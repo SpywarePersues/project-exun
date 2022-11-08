@@ -15,9 +15,9 @@ export default function Home() {
         <div className="landing-section">
           <p className="lg:text-7xl text-3xl font-Bungee text-center text-gray-200">STAY TRENDY WITH<br></br>RETRO STYLE FUN</p>
         </div>
-        <div className="lg:w-6/12 font-Bebas text-gray-900  text-lg mx-auto glassmorph my-10 w-11/12">
+        <div className="lg:w-6/12 font-sans font-semibold text-gray-900  text-lg mx-auto glassmorph my-10 w-11/12">
           <p className="font-Bungee text-2xl text-center">Play.Earn.Redeem</p>
-          <p className="p-2">Welcome to <span className="text-blue-900 underline">ReTrend</span>, play awesome games built almost half a decade ago, and get rewarded with our new <span className="text-pink-900 underline">digital coins</span>. Redeem your coins and get <span className="text-orange-900 underline">Premium stuffs</span> for different games.<br />Tired of playing online? We set up <span className="text-teal-900 underline">Public Outlets</span> too, do not waste a moment and visit your nearest one.</p>
+          <p className="p-2">Welcome to <span className="text-blue-700 underline">ReTrend</span>, play awesome games built almost half a decade ago, and get rewarded with our new <span className="text-pink-900 underline">digital coins</span>. Redeem your coins and get <span className="text-orange-500 underline">Premium stuffs</span> for different games.<br />Tired of playing online? We set up <span className="text-teal-800 underline">Public Outlets</span> too, do not waste a moment and visit your nearest one.</p>
           <p className="font-Bungee text-center text-2xl">#We Set The Trend</p>
         </div>
         <div className="text-center">
