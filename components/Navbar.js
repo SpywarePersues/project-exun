@@ -14,7 +14,7 @@ export default function Navbar({ title }){
     return(
         <div className="lg:flex justify-between lg:w-9/12 py-10 mx-auto font-Bebas lg:text-xl text-center lg:text-left">
             <Head>
-                <title>{title} - RETREND, Back to 80s</title>
+                <title>{title} - Retrend</title>
             </Head>
             <div className=""><p className="text-4xl font-semibold">RETREND</p>Back to 80s</div>
             <div>
