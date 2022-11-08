@@ -43,7 +43,8 @@ function login() {
                             Username: localStorage.getItem('Name'),
                             Balance: 1000,
                             email: localStorage.getItem('Email'),
-                            Purchases: []
+                            Purchases: [],
+                            rank: Math.floor(Math.random() * 10)+1
                         });
                 }
                 registered ? console.log('registered') : registerDetails()

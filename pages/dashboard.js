@@ -15,6 +15,7 @@ export default function Dashboard(){
     const [mounted, setMounted] = useState(false)
     const [userBalance, setUserbalance] = useState(0)
     const [userPurchases, setUserPurchases] = useState()
+    const [userRank, setUserRank] = useState(0)
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -23,6 +24,7 @@ export default function Dashboard(){
                 if(data.data().email === localStorage.getItem('Email')){
                     setUserbalance(data.data().Balance)
                     setUserPurchases(data.data().Purchases)
+                    setUserRank(data.data().rank)
                     setMounted(true)
                 }
             }))
@@ -30,11 +32,6 @@ export default function Dashboard(){
     }
     useEffect(() => {
         getData()
-        if(localStorage.getItem('Rank')){
-            console.log('Rank found')
-        } else {
-            localStorage.setItem('Rank', Math.floor(Math.random() * 10)+1)
-        }
     }, [])
 
     const [token, setToken] = useState()
@@ -61,7 +58,7 @@ export default function Dashboard(){
                                 <p>{localStorage.getItem('Email')}</p>
                                 Balance: <img src="./coin.gif" className="w-5 inline-flex"/> {userBalance}
                                 <br></br>
-                                Rank: {localStorage.getItem('Rank')}
+                                Rank: {userRank}
                             </div>
                         </div>
                         <div className="pt-10">
