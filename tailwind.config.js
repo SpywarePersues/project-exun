@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         "Bebas": 'Bebas Neue',
         "Bungee": 'Bungee Spice',
+        "Inter": 'Inter',
       }
     },
   },
