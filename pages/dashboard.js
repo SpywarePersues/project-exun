@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { db } from '../firebaseConfig'
 import { collection, getDocs } from 'firebase/firestore'
+import Footer from "../components/Footer";
 
 export default function Dashboard(){
 
@@ -70,6 +71,7 @@ export default function Dashboard(){
                 : 
                 <div>Loading...</div>
             }
+            <Footer />
         </div>
     )
 }
