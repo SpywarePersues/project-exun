@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { db } from '../firebaseConfig'
@@ -41,9 +42,9 @@ export default function Dashboard(){
 
 
     return(
-        <div>
+        <div className="">
             <Navbar title="Dashboard" />
-            <img src="./wave-bg.png" alt="wave" className="absolute top-0 -z-10 h-screen"/>
+            <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             {
                 mounted ? 
                 token ? 
