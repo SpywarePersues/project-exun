@@ -28,14 +28,14 @@ const data = {
   datasets: [
     {
       label: "Earned",
-      data: [330, 530, 850, 410, 440, 650],
+      data: [Math.floor(Math.random() * 330) + 1, Math.floor(Math.random() * 530) + 1, Math.floor(Math.random() * 850) + 1, Math.floor(Math.random() * 410) + 1, Math.floor(Math.random() * 440) + 1, Math.floor(Math.random() * 650) + 1],
       fill: true,
       borderColor: "rgba(75,192,192,1)",
       backgroundColor: "rgba(75,192,192,0.2)"
     },
     {
       label: "Spent",
-      data: [330, 250, 350, 510, 540, 760],
+      data: [Math.floor(Math.random() * 330) + 1, Math.floor(Math.random() * 530) + 1, Math.floor(Math.random() * 850) + 1, Math.floor(Math.random() * 410) + 1, Math.floor(Math.random() * 440) + 1, Math.floor(Math.random() * 650) + 1],
       fill: true,
       borderColor: "#742774",
       backgroundColor: "rgb(116, 39, 116, 0.2)"

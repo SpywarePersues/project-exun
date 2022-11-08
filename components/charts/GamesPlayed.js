@@ -11,7 +11,7 @@ export default function GamesPlayed(){
         datasets : [
             {
                 label: 'Total number fo hours played',
-                data : [10, 43, 56, 20, 10, 5],
+                data : [Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 45) + 1, Math.floor(Math.random() * 56) + 1, Math.floor(Math.random() * 87) + 1, Math.floor(Math.random() * 45) + 1, Math.floor(Math.random() * 97) + 1],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.4)',
                     'rgba(54, 162, 235, 0.4)',
