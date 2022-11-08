@@ -51,7 +51,7 @@ export default function Dashboard(){
             {
                 mounted ? 
                 token ? 
-                <div className="lg:flex mx-2 lg:mx-5 font-Inter text-gray-100">
+                <div className="lg:flex font-Inter text-gray-100 mx-12">
                     <div className="dashboard-box lg:w-[29%] py-5 pl-5 rounded-lg">
                         <div className="lg:flex">
                             <img src={localStorage.getItem('PFP')} className="w-28 mx-auto lg:mx-0 rounded-full lg:rounded-lg"/>
