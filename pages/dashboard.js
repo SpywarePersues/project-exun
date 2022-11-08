@@ -52,7 +52,7 @@ export default function Dashboard(){
                         <div className="lg:flex">
                             <img src={localStorage.getItem('PFP')} className="w-4/12 mx-auto lg:mx-0 rounded-full lg:rounded-lg"/>
                             <div className="lg:px-5 px-2">
-                                <h1 className="font-Bebas text-4xl text-white">{localStorage.getItem('Name')}</h1>
+                                <h1 className="font-Bebas text-4xl text-white mt-4">{localStorage.getItem('Name')}</h1>
                                 <h1 className="font-Bebas text-2xl text-white">{localStorage.getItem('Email')}</h1>
                                 <h1 className="font-Bebas text-xl text-white mt-4">Balance: <img src="./coin.gif" className="w-5 inline-flex"/>{userBalance}</h1>
                                 <h1 className="font-Bebas text-xl text-white">Rank: {localStorage.getItem('Rank')}</h1>
