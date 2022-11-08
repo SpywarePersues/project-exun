@@ -74,6 +74,7 @@ export default function index(){
                                     });
                                     alert('Successfully purchased '+ data.name)
                                     getAccountsData()
+                                    alert(`Redeemed ${data.name}`)
                                 }
                                 else {
                                     alert('You do not have enough points to redeem this.')
